@@ -42,6 +42,12 @@ export default function PhilosophySection() {
         {
           scaleY: 1, duration: 1.6, ease: "power3.inOut",
           scrollTrigger: { trigger: sectionRef.current, start: "top 70%" },
+          scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          end: "top 20%",
+          toggleActions: "play reverse play reverse",
+        },
         }
       );
     }

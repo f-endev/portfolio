@@ -29,6 +29,8 @@ export default function AboutSection() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top 75%",
+            end: "top 20%",
+            toggleActions: "play reverse play reverse",
           },
         }
       );

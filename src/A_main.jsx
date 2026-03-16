@@ -20,67 +20,58 @@ export default function A_Main() {
      * still receiving mouse events from the browser (they aren't
      * blocked because the canvas itself has no pointer-events restriction).
      */
-    <section className="relative min-h-screen text-gray-100 overflow-hidden bg-[#080810]">
+    <section className="relative min-h-screen text-gray-100 overflow-hidden">
       {/* ── Sticky Particle Background ── */}
       {/* pointer-events-none removed from this div so canvas receives mouse events */}
-      <div className="fixed inset-0 z-0">
-        <Particles
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-          className="w-full h-full"
-        />
-      </div>
+      {/* <div className="fixed inset-0 z-0">
+       
+      </div> */}
 
       {/* ── Navbar ── */}
-      <div className="relative z-20 flex justify-center">
+      {/* <div className="relative z-20 flex justify-center">
         <Navbar />
-      </div>
+      </div> */}
 
       {/* ── Hero ── */}
-      <div className="relative z-10">
+      <div className="relative z-10 w-full h-full">
         <HeroSection />
       </div>
 
       {/* ── Divider ── */}
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* ── About ── */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <AboutSection />
-      </div>
+      </div> */}
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* ── Skills ── */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <SkillsSection />
-      </div>
+      </div> */}
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* ── Projects ── */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <ProjectsSection />
-      </div>
+      </div> */}
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* ── Engineering Philosophy ── */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <PhilosophySection />
-      </div>
+      </div> */}
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* ── Connect / Social ── */}
-      <div className="relative z-10">
+      {/* <div className="relative z-10">
         <ConnectSection />
-      </div>
+      </div> */}
     </section>
   );
 }

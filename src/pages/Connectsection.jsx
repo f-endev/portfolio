@@ -52,6 +52,8 @@ export default function ConnectSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 80%",
+          end: "top 20%",
+  toggleActions: "play reverse play reverse",
         },
       }
     );
