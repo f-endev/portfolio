@@ -302,6 +302,8 @@ import Particles from "../components/Particles.jsx";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMotionValue } from "framer-motion";
+import { MarqueeTicker } from "../components/MarqueeTicker.jsx";
+import { grayscale } from "three/tsl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -405,9 +407,11 @@ export default function HeroSection() {
         {/* ── TOP NAV BAR ── */}
         <header
           ref={headerRef}
-          className="relative z-20 flex items-start justify-between px-6 md:px-8 pt-6 pb-0"
+          className="relative z-20"
           style={{ willChange: "transform, opacity" }}
         >
+        <div className="flex items-start justify-between px-6 md:px-8 pt-6 pb-6">
+
           <div
             className="text-black font-black uppercase"
             style={{
@@ -416,7 +420,7 @@ export default function HeroSection() {
               fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
             }}
           >
-            PORTFOLIO
+            Kushal<span style={{ color:"gray"}}>.N</span>
           </div>
 
           <div
@@ -427,8 +431,8 @@ export default function HeroSection() {
               fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
             }}
           >
-            We help brands create digital experiences
-            that connect with their audience
+            {/* I help brands create digital experiences
+            that connect with their audience */}
           </div>
 
           <div className="flex items-center gap-2">
@@ -465,8 +469,14 @@ export default function HeroSection() {
               </span>
             </button>
           </div>
+        </div>
+        <div className="flex justify-start w-full">
+        <MarqueeTicker/>
+        </div>
         </header>
 
+
+        
         {/* ── HERO CARD ──
             Positioned absolutely relative to stickyRef (the full 100vh container),
             NOT inside the flex-1 middle child. GSAP animates it from the
@@ -478,7 +488,7 @@ export default function HeroSection() {
             position: "absolute",
             // Initial values are set by gsap.set() in useEffect after measuring.
             // These are just fallback defaults in case the effect hasn't run yet.
-            top: 80,
+            top: 100,
             left: 24,
             right: 24,
             bottom: 52,
@@ -491,7 +501,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="absolute inset-0 z-0 w-full">
+          <div className="absolute inset-0 z-0 w-full h-full">
             <Particles />
           </div>
 
